@@ -4,6 +4,7 @@ import { sqlToMongoPrompt } from '../ai/ai-transform.promt'
 import { OpenAiService } from '../ai/open-ai.service';
 import {SqlTablePayload} from '../ai/ai-transform.types'
 import { MongoService } from 'src/mongo/mongo.service';
+
 @Injectable()
 export class AiTransformService {
   constructor(

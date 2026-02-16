@@ -3,6 +3,7 @@
 import { Injectable } from '@nestjs/common';
 import {PostgresService} from '../../postgres/postgres.service';
 import { AiTransformService } from '../ai/ai-transform.service'
+
 @Injectable()
 export class AiStrategy {
   constructor(

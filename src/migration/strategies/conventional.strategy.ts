@@ -8,6 +8,7 @@ import { Model } from 'mongoose';
 import { User } from '../../users/users.entity';
 import { COLLECTIONS } from '../../shared/constants';
 
+@Injectable()
 export class ConventionalStrategy {
   constructor(
     @InjectRepository(User)

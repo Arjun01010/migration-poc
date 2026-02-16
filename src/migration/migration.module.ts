@@ -8,6 +8,8 @@ import { MigrationService } from './migration.service';
 import { User } from '../users/users.entity';
 import { UserSchema } from '../users/users.schema';
 import { COLLECTIONS } from '../shared/constants';
+import { AiStrategy } from './strategies/ai.strategy';
+import { ConventionalStrategy } from './strategies/conventional.strategy';
 
 @Module({
   imports: [
@@ -17,6 +19,6 @@ import { COLLECTIONS } from '../shared/constants';
     ]),
   ],
   controllers: [MigrationController],
-  providers: [MigrationService],
+  providers: [MigrationService, AiStrategy, ConventionalStrategy],
 })
 export class MigrationModule {}
