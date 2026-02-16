@@ -10,7 +10,7 @@ export class MongoController {
     const collections = await this.mongoService.getCollectionsWithData();
     return {
       success: true,
-      data: collections,
+      data: collections, 
     };
   }
 }

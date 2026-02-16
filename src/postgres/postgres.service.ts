@@ -6,7 +6,7 @@ import { CreateUserDto } from './create-user.dto';
 export class PostgresService {
   constructor(private dataSource: DataSource) {}
 
-  async getTablesWithData() {
+   async getTablesWithData() {
     const queryRunner = this.dataSource.createQueryRunner();
     await queryRunner.connect();
 
