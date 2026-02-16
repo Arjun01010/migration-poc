@@ -13,11 +13,11 @@ import { ConventionalStrategy } from './strategies/conventional.strategy';
 import { AiTransformService } from './ai/ai-transform.service';
 import { PostgresService } from 'src/postgres/postgres.service';
 import { MongoService } from 'src/mongo/mongo.service';
-import { OpenAiService } from './ai/open-ai.service';
+import { OllamaService } from './ai/ollama.service';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([User]), 
+    TypeOrmModule.forFeature([User]),  
     MongooseModule.forFeature([
       { name: COLLECTIONS.USERS, schema: UserSchema },
     ]),
@@ -30,7 +30,7 @@ import { OpenAiService } from './ai/open-ai.service';
     AiTransformService,
     PostgresService,
     MongoService,
-    OpenAiService
+    OllamaService
   ],
 })
 export class MigrationModule {}
