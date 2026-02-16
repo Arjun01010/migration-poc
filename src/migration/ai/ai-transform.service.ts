@@ -18,10 +18,10 @@ export class AiTransformService {
 
       const result = await this.openAi.execute(prompt);
 
-    //   await this.mongo.insert(
-    //     result.collection,
-    //     result.documents
-    //   );
+      await this.mongo.insert(
+        result.collection,
+        result.documents
+      );
     }
   }
 }

@@ -33,6 +33,10 @@ export class MongoService {
     return result;
   }
 
+  async insert(collectionName: string, documents: any[]) {
+    await this.db.collection(collectionName).insertMany(documents);
+  }
+
   async onModuleDestroy() {
     await this.client.close();
   }

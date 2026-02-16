@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { OpenAI } from 'openai'; // Ensure 'openai' is installed in your project
-
+import { OpenAI } from 'openai';
 
 @Injectable()
 export class OpenAiService {
