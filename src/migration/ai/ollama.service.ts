@@ -28,7 +28,6 @@ export class OllamaService {
 
     const data = await res.json();
 
-    // 👇 HARD GUARD
     if (!data || typeof data.response !== 'string') {
       console.error('Ollama raw response:', data);
       throw new InternalServerErrorException(
@@ -36,7 +35,6 @@ export class OllamaService {
       );
     }
 
-    // 👇 Extract JSON safely
     return this.safeJsonParse(data.response);
   }
 

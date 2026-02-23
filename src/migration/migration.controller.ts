@@ -11,6 +11,6 @@ export class MigrationController {
   async migrate(
     @Query('mode') mode: 'classic' | 'ai' = 'classic',
   ) {
-    return this.migrationService.migrate(mode);
+    return this.migrationService.migrate(mode); 
   }
 }
